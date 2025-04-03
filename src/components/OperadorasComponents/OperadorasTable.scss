@@ -1,0 +1,201 @@
+#page-section{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: 0 auto;
+    min-height: 100vh;
+    
+    .main-container{
+        position: relative;
+        display: flex;
+        width: 100%;
+        min-height: 100vh;
+        border-radius: 20px;
+        overflow: hidden;
+        
+        .main-container-sides{
+            position: relative;
+            display: flex;
+            height: 100%;
+            background-color: #f1f0f5;
+            
+            &.left-side{
+                position: relative;
+                display: flex;
+                justify-content: center;
+                width: 25%;
+                background: linear-gradient(to right, #9851EF, #A96DD7);
+                
+                aside{
+                    position: relative;
+                    display: flex;
+                    flex-wrap: wrap;
+                    flex-direction: column;
+                    width: 100%;
+                    align-items: center;
+                    padding: 5vh 2vw;
+                    gap: 5vh;
+                    
+                    div.logo-container {
+                        width: 216px;
+                        height: 50px;
+                    }
+                    
+                    hr {
+                        width: 100%;
+                        height: 1px;
+                        background: #ffffff28;
+                        border: none;
+                    }
+                    
+                    nav {
+                        position: relative;
+                        display: flex;
+                        flex-wrap: wrap;
+                        width: 100%;
+                        
+                        ul{
+                            position: relative;
+                            display: flex;
+                            flex-wrap: wrap;
+                            flex-direction: column;
+                            width: 100%;
+                            height: fit-content;
+                            list-style: none;
+                            padding: 0;
+                            margin: 0;
+                            gap: 1vh;
+                            
+                            li{
+                                position: relative;
+                                display: flex;
+                                align-items: center;
+                                width: 100%;
+                                
+                                a{
+                                    position: relative;
+                                    display: flex;
+                                    align-items: center;
+                                    padding: 2vh 1vw;
+                                    color: #fff;
+                                    gap: 1vw;
+                                    opacity: .5;
+                                    cursor: pointer;
+                                    
+                                    &:hover{
+                                        opacity: 1;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            
+            &.right-side{
+                position: relative;
+                display: flex;
+                justify-content: center;
+                width: 75%;
+                
+                .content-container{
+                    position: relative;
+                    display: flex;
+                    flex-wrap: wrap;
+                    width: 90%;
+                    height: 100%;
+                    gap: 4vh;
+                    align-content: flex-start;
+                    
+                    .table-header{
+                        position: relative;
+                        display: flex;
+                        flex-wrap: wrap;
+                        flex-direction: column;
+                        width: 100%;
+                        height: fit-content;
+                        gap: 2vh;
+                        padding: 5vh 0;
+                        
+                        h1{
+                            font-weight: 500;
+                            font-size: 25pt;
+                            margin: 0;
+                        }
+                        
+                        .filter-form{
+                            position: relative;
+                            display: flex;
+                            flex-wrap: wrap;
+                            width: fit-content;
+                            height: 45px;
+                            align-items: center;
+                            
+                            p{
+                                margin-right: 1vw;
+                                color: grey;
+                            }
+                            
+                            input{
+                                width: 400px;
+                                height: 100%;
+                                background-color: #fff;
+                                border: 1px solid #d4d3d6;
+                                border-radius: 5px 0 0 5px;
+                                font-size: 12pt;
+                                padding: 0 1vw;
+                                border-right: none;
+                                outline: none;
+                            }
+                            
+                            button{
+                                width: 45px;
+                                height: 100%;
+                                background-color: #fff;
+                                border: 1px solid #d4d3d6;
+                                font-size: 12pt;
+                                border-left: none;
+                                border-radius: 0 5px 5px 0;
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                    
+                    .data-table-container{
+                        position: relative;
+                        display: flex;
+                        width: 100%;
+                        height: fit-content;
+                        max-height: 70vh;
+                        min-height: 10%;
+                        background-color: #fff;
+                        border: 1px solid #d4d3d6;
+                        border-radius: 10px;
+                        overflow: scroll;
+                        
+                        table {
+                            position: relative;
+                            width: 100%;
+                            border-collapse: collapse;
+                            
+                            th, td {
+                                padding: 8px;
+                                text-align: left;
+                                border-bottom: 1px solid #e0e0e0;
+                            }
+                            
+                            th {
+                                background-color: #efefef;
+                                border-bottom: 1px solid #e0e0e0;
+                                color: rgb(85, 85, 85);
+                                position: sticky;
+                                top: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
