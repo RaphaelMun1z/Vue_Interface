@@ -10,3 +10,6 @@ npm install
 
 3. Inicie o servidor utilizando o seguinte comando:
 npm run dev
+
+4. Hospedado na Vercel:
+https://vue-interface-chi.vercel.app
