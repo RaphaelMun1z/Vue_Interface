@@ -71,7 +71,7 @@
             </table> 
         </div>
         
-        <div class="pagination-controls" v-if="totalItems > itemsPerPage">
+        <div class="pagination-controls">
             <button 
             @click="prevPage" 
             :disabled="currentPage === 1"

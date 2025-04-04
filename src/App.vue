@@ -25,7 +25,10 @@
 					</g>
 				</svg>
 			</div>
-			<p class="text">Teste de nivelamento 04</p>
+			<div class="header-right">
+				<p class="text">Teste de nivelamento 04</p>
+				<router-link to="/about"><p class="profile-btn">Meu perfil</p></router-link>
+			</div>
 		</header>
 		<router-view />
 		<footer>Desenvolvido por: Raphael Muniz Varela</footer>
@@ -72,9 +75,25 @@ header .logo{
 	height: fit-content;
 }
 
-header .text{
+.header-right{
+	position: relative;
+	display: flex;
+	width: fit-content;
+	height: fit-content;
+	gap: 1vw;
+}
+
+.header-right a{
+	text-decoration: none !important;
+}
+
+header .header-right .text{
 	color: rgb(212, 212, 212);
 	font-size: 1rem;
+}
+
+header .header-right .profile-btn{
+	color: #fff;
 }
 
 footer{
