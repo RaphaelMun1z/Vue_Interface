@@ -1,0 +1,40 @@
+.pagination-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+    padding: 15px 0;
+    
+    .pagination-btn {
+        padding: 8px 16px;
+        background-color: #1976d2;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        
+        &:disabled {
+            background-color: #b0bec5;
+            cursor: not-allowed;
+        }
+        
+        &:hover:not(:disabled) {
+            background-color: #1565c0;
+        }
+    }
+    
+    .page-info {
+        font-size: 0.9em;
+        color: #555;
+        min-width: 120px;
+        text-align: center;
+    }
+    
+    .page-select {
+        padding: 8px;
+        border-radius: 4px;
+        border: 1px solid #ddd;
+    }
+}

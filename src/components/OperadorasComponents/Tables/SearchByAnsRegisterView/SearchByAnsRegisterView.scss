@@ -1,0 +1,66 @@
+.operadora-container {
+    position: relative;
+    width: 100%;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    
+    .operadora-header {
+        background-color: #3498db;
+        color: white;
+        padding: 20px;
+        
+        h2 {
+            margin-bottom: 5px;
+        }
+        
+        p {
+            opacity: 0.9;
+        }
+    }
+    
+    .operadora-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+        padding: 20px;
+        
+        .info-group {
+            margin-bottom: 20px;
+            
+            h3 {
+                color: #3498db;
+                margin-bottom: 10px;
+                padding-bottom: 5px;
+                border-bottom: 1px solid #eee;
+                
+                .info-item {
+                    display: flex;
+                    margin-bottom: 8px;
+                    
+                    .info-label {
+                        font-weight: 600;
+                        color: #555;
+                        min-width: 180px;
+                    }
+                    
+                    .info-value {
+                        color: #333;
+                    }    
+                    
+                    .contact-links a {
+                        display: inline-block;
+                        color: #3498db;
+                        text-decoration: none;
+                        margin-right: 15px;
+                        margin-bottom: 5px;
+                        
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

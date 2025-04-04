@@ -28,77 +28,14 @@
                     <hr>
                     <nav>
                         <ul>
-                            <li><a><span class="material-symbols-outlined">tag</span> Buscar por Número de Registro ANS</a></li>
-                            <li><a><span class="material-symbols-outlined">apartment</span> Buscar por CNPJ</a></li>
-                            <li><a><span class="material-symbols-outlined">plagiarism</span> Buscar por Nome</a></li>
+                            <li><router-link to="/search-by-term"><span class="material-symbols-outlined">edit_note</span> Buscar por termo textual (busca textual)</router-link></li>
+                            <li><router-link to="/search-by-register-ans"><span class="material-symbols-outlined">tag</span> Buscar por Número de Registro ANS</router-link></li>
                         </ul>
                     </nav>
                 </aside>
             </div>
             <div class="main-container-sides right-side">
-                <div class="content-container">
-                    <div class="table-header">
-                        <h1>Tabela de Operadoras</h1>
-                        <div class="filter-form">
-                            <p>Filtro:</p>
-                            <input type="text" placeholder="Buscar por CNPJ">
-                            <button type="submit"><span class="material-symbols-outlined">search</span></button>
-                        </div>
-                    </div>
-                    <div class="data-table-container">
-                        <p v-if="operadorasData.length == 0">Não foram encontradas operadoras.</p>
-                        <table v-else>
-                            <thead>
-                                <tr>
-                                    <th>Registro_ANS</th>
-                                    <th>CNPJ</th>
-                                    <th>Razao_Social</th>
-                                    <th>Nome_Fantasia</th>
-                                    <th>Modalidade</th>
-                                    <th>Logradouro</th>
-                                    <th>Numero</th>
-                                    <th>Complemento</th>
-                                    <th>Bairro</th>
-                                    <th>Cidade</th>
-                                    <th>UF</th>
-                                    <th>CEP</th>
-                                    <th>DDD</th>
-                                    <th>Telefone</th>
-                                    <th>Fax</th>
-                                    <th>Endereco_eletronico</th>
-                                    <th>Representante</th>
-                                    <th>Cargo_Representante</th>
-                                    <th>Regiao_de_Comercializacao</th>
-                                    <th>Data_Registro_ANS</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr v-for="operadora in operadorasData" :key="operadora.registro_ans">
-                                    <td>{{ operadora.registro_ans }}</td>
-                                    <td>{{ operadora.cnpj }}</td>
-                                    <td>{{ operadora.razao_social }}</td>
-                                    <td>{{ operadora.nome_fantasia }}</td>
-                                    <td>{{ operadora.modalidade }}</td>
-                                    <td>{{ operadora.logradouro }}</td>
-                                    <td>{{ operadora.numero }}</td>
-                                    <td>{{ operadora.complemento }}</td>
-                                    <td>{{ operadora.bairro }}</td>
-                                    <td>{{ operadora.cidade }}</td>
-                                    <td>{{ operadora.uf }}</td>
-                                    <td>{{ operadora.cep }}</td>
-                                    <td>{{ operadora.ddd }}</td>
-                                    <td>{{ operadora.telefone }}</td>
-                                    <td>{{ operadora.fax }}</td>
-                                    <td>{{ operadora.endereco_eletronico }}</td>
-                                    <td>{{ operadora.representante }}</td>
-                                    <td>{{ operadora.cargo_representante }}</td>
-                                    <td>{{ operadora.regiao_de_comercializacao }}</td>
-                                    <td>{{ operadora.data_registro_ans }}</td>
-                                </tr>
-                            </tbody>
-                        </table> 
-                    </div>
-                </div>
+                <router-view></router-view>
             </div>
         </section>
     </section>
@@ -107,23 +44,6 @@
 <script setup lang="ts">
 // Style
 import './OperadorasTable.scss'
-
-// Interfaces
-import type { OperadoraInterface } from '../../types/Operadora';
-
-import { ref } from 'vue';
-import axios from "axios";
-
-const operadorasData = ref<OperadoraInterface[]>([]);
-
-axios.get("http://localhost:5000/api/operadoras")
-.then((res) => {
-    operadorasData.value = res.data;
-    console.log(operadorasData.value);
-})
-.catch((error) => {
-    console.log(error);
-});
 </script>
 
 <style scoped></style>

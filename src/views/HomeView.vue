@@ -14,6 +14,7 @@ main {
 	position: relative;
 	display: flex;
 	flex-wrap: wrap;
+	flex-direction: column;
 	width: 100%;
 	height: fit-content;
 	justify-self: center;

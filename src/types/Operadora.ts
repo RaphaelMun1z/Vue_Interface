@@ -1,8 +1,8 @@
 export interface OperadoraInterface {
-	registro_ans: string,
+	registroAns: string,
 	cnpj: string,
-	razao_social: string,
-	nome_fantasia: string,
+	razaoSocial: string,
+	nomeFantasia: string,
 	modalidade: string,
 	logradouro: string,
 	numero: string,
@@ -14,9 +14,9 @@ export interface OperadoraInterface {
 	ddd: string,
 	telefone: string,
 	fax: string,
-	endereco_eletronico: string,
+	enderecoEletronico: string,
 	representante: string,
-	cargo_representante: string,
-	regiao_de_comercializacao: number,
-	data_registro_ans: Date
+	cargoRepresentante: string,
+	regiaoDeComercializacao: number,
+	dataRegistroAns: Date
 }
