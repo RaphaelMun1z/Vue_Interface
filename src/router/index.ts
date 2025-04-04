@@ -13,6 +13,7 @@ const router = createRouter({
             path: '/',
             name: 'home',
             component: HomeView,
+            redirect: '/search-by-term',
             children: [
                 {
                     path: 'search-by-term',
