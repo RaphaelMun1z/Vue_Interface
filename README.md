@@ -1,39 +1,12 @@
-# teste-vue-project
+# Teste de nivelamento 04 - Vue Interface
 
-This template should help get you started developing with Vue 3 in Vite.
+## Passo a passo para executar o projeto:
 
-## Recommended IDE Setup
+1. Clone o projeto:
+git clone https://github.com/RaphaelMun1z/Vue_Interface.git
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
-
-## Type Support for `.vue` Imports in TS
-
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vite.dev/config/).
-
-## Project Setup
-
-```sh
+2. Instale as dependências:
 npm install
-```
 
-### Compile and Hot-Reload for Development
-
-```sh
+3. Inicie o servidor utilizando o seguinte comando:
 npm run dev
-```
-
-### Type-Check, Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
